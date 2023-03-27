@@ -15,7 +15,7 @@
   <li class="page-item" [appClass]="{disabled: activeImg === 0}" >
     <a class="page-link" href="#" (click)="activeImg = activeImg - 1">Previous</a>
   </li>
-  <ng-container *ngFor="let img of images; let i = index";>
+  <ng-container *appLoop="images.length; let i = index";>
     <li class="page-item"
       [appClass]="{active: activeImg === i}"
       *ngIf="showBtn(i)">
